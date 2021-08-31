@@ -1,22 +1,16 @@
 <template>
   <div id="app">
-    <div>
-      <b-button>Button</b-button>
-      <b-button variant="danger">Button</b-button>
-      <b-button variant="success">Button</b-button>
-      <b-button variant="outline-primary">Button</b-button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <AppHeader />
+    <h1>Welcome to Vue js CLI</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import AppHeader from "./components/AppHeader.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    AppHeader,
   },
 };
 </script>
