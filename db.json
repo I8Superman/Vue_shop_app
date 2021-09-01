@@ -1,0 +1,18 @@
+{
+    "products": [
+        {
+            "name": "Big Shoe",
+            "price": "$200",
+            "brand": "Mike",
+            "inventoryStatus": false,
+            "id": 1
+        },
+        {
+            "name": "Loafers",
+            "price": "$50",
+            "brand": "CasualAtHome",
+            "inventoryStatus": true,
+            "id": 2
+        }
+    ]
+}
