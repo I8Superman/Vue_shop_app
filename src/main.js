@@ -13,7 +13,8 @@ Vue.use(IconsPlugin)
 Vue.component("ValidationProvider", ValidationProvider);
 Vue.component("ValidationObserver", ValidationObserver);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
 
 new Vue({
   render: h => h(App),

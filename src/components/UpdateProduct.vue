@@ -43,7 +43,7 @@
 <script>
 export default {
   name: "UpdateProduct",
-  props: ["product"],
+  props: ["product"], // Name of the props corresponds to the (purple) v-bind directive of the elem in the parent component
   data() {
     return {
       modalShow: false,

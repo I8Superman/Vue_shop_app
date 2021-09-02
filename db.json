@@ -20,6 +20,20 @@
       "brand": "uuuiiii",
       "inventoryStatus": true,
       "id": 4
+    },
+    {
+      "name": "Crazy Name",
+      "price": "300",
+      "brand": "crazy Brand",
+      "inventoryStatus": true,
+      "id": 5
+    },
+    {
+      "name": "run forya lifw",
+      "price": "10",
+      "brand": "Dont get killed",
+      "inventoryStatus": false,
+      "id": 6
     }
   ]
 }
