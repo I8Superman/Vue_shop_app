@@ -3,7 +3,8 @@
     <AppHeader />
     <b-container>
       <b-row class="justify-content-center">
-        <AddProduct />
+        <!-- We bind the addProduct emit to the component by using the v-on directive (shorthand @). The "addProduct" in white is the method called when the event is triggered -->
+        <AddProduct @addProduct="addProduct" />
         <!-- We can pass data (props) to a component by simply using the v-bind directive (':' for shorthand). Here we bind the productList array to the ListProduct component and call the props 'productlist' -->
         <ListProduct :products="productList" />
       </b-row>
@@ -35,10 +36,14 @@ export default {
         let result = await axios.get("http://localhost:3000/products/");
         // console.log(result.data);
         this.productList = result.data;
-        console.log(this.productList);
+        //console.log(this.productList);
       } catch (error) {
         console.log(error);
       }
+    },
+    async addProduct(newProduct) {
+      await axios.post("http://localhost:3000/products/", newProduct); // We make a post request with our payload being the new product obj.
+      this.getProductList(); // after posting we call getProductList to update our arr of products (getting what we posted)
     },
   },
   mounted() {

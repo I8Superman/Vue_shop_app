@@ -1,18 +1,25 @@
 {
-    "products": [
-        {
-            "name": "Big Shoe",
-            "price": "$200",
-            "brand": "Mike",
-            "inventoryStatus": false,
-            "id": 1
-        },
-        {
-            "name": "Loafers",
-            "price": "$50",
-            "brand": "CasualAtHome",
-            "inventoryStatus": true,
-            "id": 2
-        }
-    ]
+  "products": [
+    {
+      "name": "Big Shoe",
+      "price": "$200",
+      "brand": "Mike",
+      "inventoryStatus": false,
+      "id": 1
+    },
+    {
+      "name": "Loafers",
+      "price": "$50",
+      "brand": "CasualAtHome",
+      "inventoryStatus": true,
+      "id": 2
+    },
+    {
+      "name": "sdsdd",
+      "price": "2323223",
+      "brand": "vvv",
+      "inventoryStatus": false,
+      "id": 3
+    }
+  ]
 }

@@ -27,7 +27,7 @@
               </ValidationProvider>
 
               <ValidationProvider name="Name" rules="required: true" v-slot="{ errors }">
-                <b-form-group label="Inventory ?">
+                <b-form-group label="Inventory?">
                   <b-form-radio v-model="form.inventoryStatus" name="inventorystatus" value="true">In stock</b-form-radio>
                   <b-form-radio v-model="form.inventoryStatus" name="inventorystatus" value="false">Out of stock</b-form-radio>
                   <span class="error">{{ errors[0] }}</span>
@@ -52,11 +52,24 @@ export default {
         brand: "",
         inventoryStatus: "",
       },
+      submitted: false,
     };
   },
   methods: {
     addProduct() {
-      console.log(this.form);
+      this.submitted = true;
+      this.form.inventoryStatus = this.form.inventoryStatus === "true"; // The value from the radio buttons is a string. We need it as a boolean. By comparing our string with another string, it will be either true or false, that is, return a boolean.
+      // "addProduct" is the name of the emit to listen for
+      this.$emit("addProduct", this.form);
+
+      // Lets clear the form after submitting
+      this.form = {
+        name: "",
+        price: "",
+        brand: "",
+        inventoryStatus: "",
+      };
+      this.submitted = false;
     },
   },
 };
