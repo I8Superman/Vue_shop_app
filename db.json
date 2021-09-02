@@ -1,13 +1,6 @@
 {
   "products": [
     {
-      "name": "Big Shoe",
-      "price": "$200",
-      "brand": "Mike",
-      "inventoryStatus": false,
-      "id": 1
-    },
-    {
       "name": "Loafers",
       "price": "$50",
       "brand": "CasualAtHome",
@@ -15,11 +8,18 @@
       "id": 2
     },
     {
-      "name": "sdsdd",
-      "price": "2323223",
-      "brand": "vvv",
-      "inventoryStatus": false,
-      "id": 3
+      "id": 3,
+      "name": "New Name",
+      "price": "2000",
+      "brand": "New Brand",
+      "inventoryStatus": false
+    },
+    {
+      "name": "e4fdsd",
+      "price": "444",
+      "brand": "uuuiiii",
+      "inventoryStatus": true,
+      "id": 4
     }
   ]
 }

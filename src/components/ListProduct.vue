@@ -19,9 +19,7 @@
                 </b-button>
               </b-col>
               <b-col>
-                <b-button>
-                  <i class="fas fa-edit"></i>
-                </b-button>
+                <UpdateProduct :product="product" @updateProduct="updateProduct" />
               </b-col>
             </b-row>
           </b-card>
@@ -32,8 +30,21 @@
 </template>
 
 <script>
+import UpdateProduct from "./UpdateProduct.vue";
 export default {
   props: ["products"], // Write the props RECIEVED/PASSED to THIS component here
+  components: {
+    UpdateProduct,
+  },
+  methods: {
+    deleteProduct(productId) {
+      this.$emit("deleteProduct", productId); // We emit the 'deleteProduct', with an argument of the product id
+    },
+    updateProduct(updatedProduct) {
+      // Annoying: you have to pass the data all the way up through the parent chain to get to the root component (App.vue) to make the put request to the server
+      this.$emit("updateProduct", updatedProduct);
+    },
+  },
 };
 </script>
 
